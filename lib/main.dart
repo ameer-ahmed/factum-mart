@@ -14,10 +14,15 @@ class FactumMartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => FactumMartAuthLayoutCubit(),)
+        BlocProvider(
+          create: (context) => FactumMartAuthLayoutCubit(),
+        )
       ],
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'Montserrat'),
+        theme: ThemeData(
+          fontFamily: 'Montserrat',
+          primarySwatch: Colors.red,
+        ),
         home: const FactumMartSplashLayout(),
         debugShowCheckedModeBanner: false,
       ),

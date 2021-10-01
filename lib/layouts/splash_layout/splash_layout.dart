@@ -21,7 +21,7 @@ class _FactumMartSplashLayoutState extends State<FactumMartSplashLayout> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const FactumMartAuthLayout(),
+          builder: (context) => FactumMartAuthLayout(),
         ),
       );
     });
@@ -32,8 +32,12 @@ class _FactumMartSplashLayoutState extends State<FactumMartSplashLayout> {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const FactumMartLogo(),
+          const FactumMartLogo(
+            textScaleFactor: 2,
+            alignment: MainAxisAlignment.center,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 15,
