@@ -9,3 +9,13 @@ void navigateTo({
     MaterialPageRoute(builder: (context) => widget),
   );
 }
+
+void navigateAndKill({
+  required context,
+  required widget,
+}) {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => widget),
+  );
+}

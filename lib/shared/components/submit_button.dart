@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class FactumMartSubmitButton extends StatelessWidget {
   const FactumMartSubmitButton({
     Key? key,
+    required this.onPressed,
     required this.text,
   }) : super(key: key);
+  final Function? onPressed;
   final String? text;
 
   @override
@@ -19,7 +21,7 @@ class FactumMartSubmitButton extends StatelessWidget {
         color: Colors.red,
       ),
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: () => onPressed,
         child: Text(
           text!,
           style: const TextStyle(
