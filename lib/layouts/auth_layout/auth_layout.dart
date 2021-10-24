@@ -1,6 +1,6 @@
 import 'package:factum_mart/layouts/auth_layout/cubit/cubit.dart';
 import 'package:factum_mart/layouts/auth_layout/cubit/states.dart';
-import 'package:factum_mart/layouts/home_layout/home_layout.dart';
+import 'package:factum_mart/layouts/shop_layout/shop_layout.dart';
 import 'package:factum_mart/shared/components/components.dart';
 import 'package:factum_mart/shared/components/logo.dart';
 import 'package:factum_mart/shared/components/text_field.dart';
@@ -14,17 +14,17 @@ class FactumMartAuthLayout extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    var cubit = FactumMartAuthLayoutCubit.get(context);
     return BlocConsumer<FactumMartAuthLayoutCubit, FactumMartAuthLayoutStates>(
       listener: (context, state) {
         if (state is FactumMartLoginSuccessState) {
           navigateAndKill(
             context: context,
-            widget: const FactumMartHomeLayout(),
+            widget: const FactumMartShopLayout(),
           );
         }
       },
       builder: (context, state) {
-        var cubit = FactumMartAuthLayoutCubit.get(context);
         return SafeArea(
           child: Scaffold(
             resizeToAvoidBottomInset: true,

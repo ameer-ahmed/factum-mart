@@ -1,7 +1,5 @@
-import 'dart:developer';
-
 import 'package:factum_mart/layouts/auth_layout/cubit/states.dart';
-import 'package:factum_mart/models/user_model.dart';
+import 'package:factum_mart/models/layouts_models/auth_layout/user_model.dart';
 import 'package:factum_mart/shared/constants.dart';
 import 'package:factum_mart/shared/network/end_points.dart';
 import 'package:factum_mart/shared/network/local/cache_helper.dart';

@@ -1,8 +1,7 @@
 import 'package:factum_mart/layouts/auth_layout/auth_layout.dart';
-import 'package:factum_mart/layouts/home_layout/home_layout.dart';
+import 'package:factum_mart/layouts/shop_layout/shop_layout.dart';
 import 'package:factum_mart/shared/components/logo.dart';
 import 'package:factum_mart/shared/constants.dart';
-import 'package:factum_mart/shared/network/local/cache_helper.dart';
 import 'package:flutter/material.dart';
 
 class FactumMartSplashLayout extends StatefulWidget {
@@ -25,7 +24,7 @@ class _FactumMartSplashLayoutState extends State<FactumMartSplashLayout> {
         context,
         MaterialPageRoute(
           builder: (context) => token != null
-              ? const FactumMartHomeLayout()
+              ? const FactumMartShopLayout()
               : FactumMartAuthLayout(),
         ),
       );
