@@ -15,6 +15,7 @@ void main() async {
   DioHelper.init();
   await CacheHelper.init();
   token = CacheHelper.getData(key: 'userToken');
+  debugPrint(token);
   runApp(
     FactumMartApp(
       token: token,
@@ -36,7 +37,9 @@ class FactumMartApp extends StatelessWidget {
           create: (context) => FactumMartShopLayoutCubit(),
         ),
         BlocProvider<FactumMartHomeModuleCubit>(
-          create: (context) => FactumMartHomeModuleCubit()..getHomeCategories(),
+          create: (context) => FactumMartHomeModuleCubit()
+            ..getHomeCategories()
+            ..getHomeProducts(),
         ),
       ],
       child: MaterialApp(

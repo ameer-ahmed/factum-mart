@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:factum_mart/shared/network/end_points.dart';
+import 'package:flutter/material.dart';
 
 class DioHelper {
   static late Dio dio;
@@ -17,6 +18,9 @@ class DioHelper {
     required Map<String, dynamic> data,
     String? token,
   }) {
+    debugPrint('***** START REQUEST *****');
+    debugPrint('URI: ' + baseUrl + url);
+    debugPrint('****** END REQUEST ******');
     return dio.post(
       url,
       options: Options(
@@ -35,6 +39,10 @@ class DioHelper {
     String? token,
     Map<String, dynamic>? query,
   }) {
+    debugPrint('***** START REQUEST *****');
+    debugPrint('URI: ' + baseUrl + url);
+    debugPrint('****** END REQUEST ******');
+
     return dio.get(
       url,
       options: Options(

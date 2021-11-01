@@ -4,6 +4,7 @@ import 'package:factum_mart/shared/constants.dart';
 import 'package:factum_mart/shared/network/end_points.dart';
 import 'package:factum_mart/shared/network/local/cache_helper.dart';
 import 'package:factum_mart/shared/network/remote/dio_helper.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FactumMartAuthLayoutCubit extends Cubit<FactumMartAuthLayoutStates> {
@@ -30,13 +31,13 @@ class FactumMartAuthLayoutCubit extends Cubit<FactumMartAuthLayoutStates> {
           key: 'userToken',
           value: factumMartUserModel!.data!.token,
         );
-        print(token);
+        debugPrint('$token');
         emit(FactumMartLoginSuccessState());
       } else {
         emit(FactumMartLoginErrorState());
       }
     }).catchError((error) {
-      print(error);
+      debugPrint('$error');
     });
   }
 }

@@ -11,11 +11,11 @@ class FactumMartShopLayoutCubit extends Cubit<FactumMartShopLayoutStates> {
 
   static FactumMartShopLayoutCubit get(context) => BlocProvider.of(context);
 
-  List<Widget> factumMartModules = const [
-    FactumMartHomeModule(),
-    FactumMartFavoritesModule(),
-    FactumMartCartModule(),
-    FactumMartSettingsModule(),
+  List<Widget> factumMartModules = [
+    const FactumMartHomeModule(),
+    const FactumMartFavoritesModule(),
+    const FactumMartCartModule(),
+    const FactumMartSettingsModule(),
   ];
   int currentIndex = 0;
 

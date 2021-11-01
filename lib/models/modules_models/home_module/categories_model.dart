@@ -13,7 +13,7 @@ class FactumMartHomeModuleCategoriesModel {
 }
 
 class FactumMartHomeModuleCategoriesDataModel {
-  String? id;
+  int? id;
   String? name;
   String? icon;
   FactumMartHomeModuleCategoriesDataModel.fromMap(Map<String, dynamic> json) {
