@@ -122,7 +122,7 @@ class _FactumMartHomeModuleState extends State<FactumMartHomeModule> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade200,
+                          color: Colors.grey.shade100,
                         ),
                         padding: const EdgeInsets.fromLTRB(0, 4, 0, 4),
                         child: GridView.count(
@@ -150,7 +150,7 @@ class _FactumMartHomeModuleState extends State<FactumMartHomeModule> {
                   ),
                   if (cubit.isOutRange == false)
                     Container(
-                      color: Colors.grey.shade200,
+                      color: Colors.grey.shade100,
                       padding: const EdgeInsets.symmetric(
                         vertical: 14,
                       ),
@@ -331,6 +331,10 @@ class FactumMartHomeModuleProductItem extends StatelessWidget {
                             ),
                           ]
                         ],
+                      ),
+                      const Icon(
+                        Icons.shopping_cart_outlined,
+                        color: Colors.grey,
                       ),
                     ],
                   ),

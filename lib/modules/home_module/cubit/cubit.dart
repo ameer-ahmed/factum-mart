@@ -78,6 +78,4 @@ class FactumMartHomeModuleCubit extends Cubit<FactumMartHomeModuleStates> {
       emit(FactumMartHomeModuleFullLoadedProductsState());
     }
   }
-
-  void getMoreHomeProducts() {}
 }
